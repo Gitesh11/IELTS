@@ -1,0 +1,18 @@
+[{
+    "Id":1,
+    "WritingTask":"2 Writing task",
+    "Price":99,
+    "Pack":"silver"
+},
+{
+    "Id":2,
+    "WritingTask":"10 Writing task",
+    "Price":799,
+    "Pack":"Gold"
+},
+{
+    "Id":3,
+    "WritingTask":"30 Writing task",
+    "Price":1299,
+    "Pack":"Premium"
+}]

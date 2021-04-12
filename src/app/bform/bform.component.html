@@ -1,0 +1,108 @@
+<section class="create" *ngIf="create">
+  <div class="col-10 m-auto">
+    <div class="card m-auto" >
+  <div class="card-header">
+    <h1>Student Details</h1>
+  </div>
+  <!-- style="background-color: #E74C3C " -->
+  <div class="bform">
+  <div class="card-body">
+<form  [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label"  >FullName</label>
+        <div class="col-sm-10">
+            
+          <input class="form-control" type="text" placeholder="Enter your full name "formControlName="userName" [ngClass]="{'is-invalid':registrationForm.get('userName').touched && registrationForm.get('userName').invalid}" required >
+          <div class="invalid-feedback">
+            <div>First Name is required</div>
+          </div>
+    </div>
+      </div>
+      <div class="form-group row">
+        <label for="email" class="col-sm-2 col-form-label">Email</label>
+        <div class="col-sm-10">
+          <input class="form-control" type="email" placeholder="Enter your Email " formControlName="email" [ngClass]="{'is-invalid':registrationForm.get('email').touched && registrationForm.get('email').invalid}" required >
+          <div *ngIf="registrationForm.get('email').touched && registrationForm.get('email').invalid"  class="invalid-feedback">
+            <div *ngIf="registrationForm.get('email').errors.required">Email Name is required</div>
+            <div *ngIf="registrationForm.get('email').errors.email">Email must be a valid email Address</div>
+    </div>
+          </div>
+      </div>
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Task</label>
+      <div class="col-sm-10">
+        <select *ngIf="propertyId==1" class="form-control" (change)="fileupload()" formControlName="task">
+            <option>1</option>
+            <option>2</option>
+          </select>
+          <select *ngIf="propertyId==2" class="form-control" (change)="fileupload()" formControlName="task">
+            <option>5</option>
+            <option>10</option>
+          </select>
+          <select *ngIf="propertyId==3" class="form-control" (change)="fileupload()" formControlName="task">
+            <option>25</option>
+            <option>30</option>
+          </select>
+      </div>
+    </div>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Exam type</label>
+        <div class="col-sm-10">
+          <select class="form-control" formControlName="examType">
+              <option>Academic</option>
+              <option>GT(General Training)</option>
+            </select>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Mobile Number</label>
+        <div class="col-sm-10">
+          <input required class="form-control" type="number" placeholder="Enter your Number " formControlName="Mob" [ngClass]="{'is-invalid':registrationForm.get('Mob').touched && registrationForm.get('Mob').invalid}" required>
+          <div class="invalid-feedback">
+            <div> Mobile Number is required</div>
+          </div>
+          <!-- <select class="form-control" formControlName="material">
+              <option>Sends me the topic to write on</option>
+              <option>I will choose my own topic,Do not send it</option>
+            </select> -->
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Feedback Time</label>
+        <div class="col-sm-10">
+          <select class="form-control" (change)="priceUpdate()" formControlName="feedbackTime">
+              <option>48 hours</option> 
+              <option>24 hours</option>
+              <option>12 hours</option>
+            </select>
+        </div>
+      </div>
+      <!-- <app-file-upload formControlName="uploadTask"></app-file-upload> -->
+      <div class="form-group row" >
+      <label class="col-sm-2 col-form-label">Upload Task</label>
+      <div  class="col-sm-10">
+          <input type="file" multiple class="form-control-file" id="uploadTask" formControlName="uploadTask" (change)="onSelectedFile($event)" required>
+      </div>
+      </div>
+    <div class="form-group row">
+      <div class="col-sm-10" style="margin-left: 18%;">
+        <h2>{{productPrice|currency:'INR'}}</h2>  
+        <button *ngIf="valid" type="submit" class="btn btn-block btn-success text-uppercase "  [disabled]="registrationForm.invalid">Buy Now</button> 
+   <p style="font-style: italic; color:chartreuse; font-size: 30px;">Note: If you don't have all task don't worry just upload one task we will reach you on Mail soon!!!</p>
+        
+        <!-- <button  class="btn btn-primary" routerLink="/checkout">Add to cart</button>-->
+      </div>
+    </div>
+    </div>
+  </form>
+</div>
+ </div>
+ </div>
+</div>
+<!-- <h2>{{registrationForm.value|json}}</h2> -->
+</section>
+<section class="users" *ngIf="!create">
+  <!-- <app-checkout [price]="productPrice" [username]="hello"></app-checkout> -->
+  <app-checkout [price]="productPrice" [username]="name"></app-checkout> 
+</section>

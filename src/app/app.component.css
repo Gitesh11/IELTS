@@ -1,0 +1,5 @@
+.bgcolor {
+    margin-top: 70px;
+    background: hsl(184, 100%, 50%);
+    background: linear-gradient(to right, #3396A7 , #DBCAE2);
+  }

@@ -1,0 +1,147 @@
+<div class="container-fluid">
+   
+  <header>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <!-- Slide One - Set the background image for this slide in the line below -->
+        <div class="carousel-item active" style="background-image: url('assets/IeltsR.jpg')">
+          <!-- <div class="carousel-caption d-none d-md-block">
+            <h2 class="display-4">First Slide</h2>
+            <p class="lead">This is a description for the first slide.</p>
+          </div> -->
+        </div>
+        <!-- Slide Two - Set the background image for this slide in the line below -->
+        <div class="carousel-item" style="background-image: url('assets/IeltsTest.jpg')">
+          <!-- <div class="carousel-caption d-none d-md-block">
+            <h2 class="display-4">Second Slide</h2>
+            <p class="lead">This is a description for the second slide.</p>
+          </div> -->
+        </div>
+        <!-- Slide Three - Set the background image for this slide in the line below -->
+        <div class="carousel-item" style="background-image: url('assets/IeltsQ.png')">
+          <!-- <div class="carousel-caption d-none d-md-block">
+            <h2 class="display-4">Third Slide</h2>
+            <p class="lead">This is a description for the third slide.</p>
+          </div> -->
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+    </div>
+  </header>
+  
+
+
+  <h2>How does It Work?</h2>
+    <div class="row">
+        <div class="col-lg-4">
+            <h1>Choose Your Topic</h1>
+            <h5>Choose your writing tasks
+                from our IELTS Test Library
+                - or create a topic of your own.</h5>
+        </div>
+        <div class="col-lg-4">
+            <h1>Submit Your Essay</h1>
+            <h5>Upload your essays directly
+                from the test page and select
+                an evaluation package.</h5>
+        </div>
+
+        <div class="col-lg-4">
+            <h1>Receive Your Score</h1>
+            <h5>We will send you the detailed
+                feedback and an estimate band
+                score via email in 48 hours.</h5>
+        </div>
+    </div>
+    <div>
+        <app-productslist></app-productslist>
+    </div>
+    <div>
+        <h1 style="color: rgb(223, 51, 21);">You can SUBMIT :</h1>     
+<ol style="font-size: 30px; font-weight: bold; color: rgb(21, 247, 96);">
+    <li>Essay</li>
+    <li>Letter</li>
+    <li>150 words passage(with topic)</li>
+    <li>250 words passage(with topic)</li>
+    <li>Graph and description.</li>
+    <li>Picture and description.</li>
+</ol>    
+    </div>
+    <button style="margin-left: 40%;" class="btn btn-primary text-uppercase"routerLink="/product">Check Our products</button>
+    <div>
+      <h1 style="font-style: italic; color: white;">Sample Report</h1>
+        <object
+          data='assets\sample report.pdf'
+          type="application/pdf"
+          width="1000"
+          height="678"
+        >
+  
+          <iframe
+            src='assets\sample report.pdf'
+            width="500"
+            height="678"
+          >
+          <p>This browser does not support PDF!</p>
+          </iframe>
+  
+        </object>
+      </div>
+      <button style="margin-left: 40%;" class="btn btn-primary text-uppercase"routerLink="/product">Check Our products</button>
+    <div class="row" style="margin-top: 20px;">
+        <h1 style="font-style: oblique; color: rgb(226, 134, 13);">Criterion for checking WRITING section of IELTS .</h1>
+        <div class="col-sm-3" style="background-color:rgba(50, 241, 241, 0.808);">
+            <h1>1</h1>
+          <h1>Task Achievement</h1>
+        </div>
+        <div class="col-sm-3" style="background-color:pink;">
+            <h1>2</h1>
+            <h1>Coherence & Cohesion</h1>
+        </div>
+        <div class="col-sm-3" style="background-color:rgb(184, 104, 104);">
+            <h1>3</h1>
+          <h1>Lexical Resource</h1>
+          </div>
+          <div class="col-sm-3" style="background-color:violet;">
+            <h1>4</h1>
+            <h1>Grammatical Range & Accuracy</h1>
+          </div>
+      </div>
+      <div style="margin-top: 20px;">
+      <button style="margin-left: 40%;" class="btn btn-primary text-uppercase"routerLink="/product">Check Our products</button>
+      </div>
+      <h2>Why Choose Us?</h2>
+    <div class="row">
+        <div class="col-4">
+            <h3>Cambridge Experience</h3>
+            <h5>Your IELTS writing tasks will be marked by our examiners from the UK with years of experience with IELTS tests.</h5>
+        </div>
+        <div class="col-4">
+            <h3>Detailed Feedback</h3>
+            <h5>Receive detailed feedback, accurate band score and suggestions for improvement on your IELTS writing essays.</h5>
+        </div>
+
+        <div class="col-4">
+            <h3>Quick Response</h3>
+            <h5>No time to waste! Obtain your IELTS writing assessment and evaluation from our examiners in just 48 hours.</h5>
+        </div>
+    </div>
+    <div class="testimonial">
+    <app-testimonial></app-testimonial>
+  </div>
+  <div style="margin-top: 20px;">
+    <button style="margin-left: 40%;" class="btn btn-primary text-uppercase"routerLink="/product">Check Our products</button>
+    </div>
+</div>
