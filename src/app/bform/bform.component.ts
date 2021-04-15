@@ -46,7 +46,7 @@ export class BformComponent implements OnInit {
           email:['',[Validators.required, Validators.email]],
           task:[''],
           examType:[''],
-          Mob:[''],
+          Mob:['',[Validators.maxLength(12)]],
           feedbackTime:[''],
           uploadTask:['',[Validators.required]]
     

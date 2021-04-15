@@ -1,16 +1,21 @@
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background:rgb(252, 84, 18); height: 70px;">
-  <ul style="list-style-type:none;">
+<div class="container-fluid">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background:red; height: fit-content;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <div style="margin-left: 100%;">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>  
+      <ul style="list-style-type:none;">
     <li>
     <a class="navbar-brand" href="#">IELTS WRITING</a>
     </li>
-    <li><h5 style="color: chartreuse;">Get Your IELTS WRITING checked !</h5></li>
+    <li><h6 style="color: chartreuse;">Get Your IELTS WRITING checked !</h6></li>
   </ul>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
+  </div>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto" style="margin-left: 200px; font-size: 30px;">
+      <ul class="nav navbar-nav" style="margin-left: 200px;">
         <li class="nav-item">
           <a class="nav-link" [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active" routerLink="/">Home<span class="sr-only">(current)</span></a>
         </li>
@@ -44,4 +49,6 @@
       </ul>
       </div> -->
     </div>
+</div>
   </nav>
+</div>
